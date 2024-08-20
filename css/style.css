@@ -13,9 +13,29 @@ body {
     font-family: sans-serif;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#carousel {
+    height: 700px;
+    width: 1000px;
+    margin: 50px auto;
+}
+
+#jumbotron {
+    height: 100%;
+}
+
 /* Utils */
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.active {
+    display: block;
 }
