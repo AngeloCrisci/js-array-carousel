@@ -4,7 +4,7 @@ console.log('JS OK')
 const buttonNext = document.getElementById('next')
 const buttonPrev = document.getElementById('prev')
 const carouselJumbotron = document.getElementById('jumbotron')
-
+const thumbnailsJumbotron = document.getElementById('thumbnails')
 
 // MILESTONE 2
 
@@ -20,13 +20,16 @@ for( let i = 0; i < sources.length; i++ ){
 }
 
 carouselJumbotron.innerHTML = imgs;
+thumbnailsJumbotron.innerHTML = imgs;
 
-const images = document.querySelectorAll('img')
+const images = document.querySelectorAll('#carousel img')
+const thumb = document.querySelectorAll('#thumbnails img')
 
 // Creamo la classe active
 
 let currentActiveIndex = 0;
 images[currentActiveIndex].classList.add('active');
+thumb[currentActiveIndex].classList.add('active');
 
 // Eventi Dinamici
 
@@ -34,6 +37,7 @@ images[currentActiveIndex].classList.add('active');
 
 buttonNext.addEventListener('click', function(){
     images[currentActiveIndex].classList.remove('active');
+    thumb[currentActiveIndex].classList.remove('active');
 
     currentActiveIndex++;
 
@@ -42,12 +46,14 @@ buttonNext.addEventListener('click', function(){
     }
 
     images[currentActiveIndex].classList.add('active');
+    thumb[currentActiveIndex].classList.add('active');
 })
 
 // Prev Button
 
 buttonPrev.addEventListener('click' , function(){
     images[currentActiveIndex].classList.remove('active');
+    thumb[currentActiveIndex].classList.remove('active');
 
     currentActiveIndex--;
 
@@ -56,4 +62,5 @@ buttonPrev.addEventListener('click' , function(){
     }
 
     images[currentActiveIndex].classList.add('active');
+    thumb[currentActiveIndex].classList.add('active');
 })
