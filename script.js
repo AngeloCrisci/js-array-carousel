@@ -19,4 +19,8 @@ images[currentActiveIndex].classList.add('active');
 
 buttonNext.addEventListener('click', function(){
     images[currentActiveIndex].classList.remove('active');
+
+    currentActiveIndex++;
+
+    images[currentActiveIndex].classList.add('active');
 })
