@@ -3,9 +3,26 @@ console.log('JS OK')
 // Elementi dal DOM
 const buttonNext = document.getElementById('next')
 const buttonPrev = document.getElementById('prev')
-const images = document.querySelectorAll('img')
+const carouselJumbotron = document.getElementById('jumbotron')
 
-console.log(images)
+
+// MILESTONE 1 const images = document.querySelectorAll('img')
+
+
+// MILESTONE 2
+
+const sources = ['../img/01.webp' , '02.webp' , '03.webp' , '04.webp' , '05.webp']
+
+// Genero immagini 
+
+let imgs = '';
+
+for( let i = 0; i < sources.length; i++ ){
+    const currentElement = sources[i];
+    imgs += `<img alt= landscape-${i + 1} src="${currentElement}">`
+}
+
+carouselJumbotron.innerHTML = imgs;
 
 
 // Creamo la classe active
