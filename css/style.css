@@ -39,3 +39,19 @@ img {
 .active {
     display: block;
 }
+
+#carousel .bi {
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next {
+    right: 20%;
+}
+
+#prev {
+    left: 20%;
+}
