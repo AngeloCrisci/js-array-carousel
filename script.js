@@ -6,12 +6,9 @@ const buttonPrev = document.getElementById('prev')
 const carouselJumbotron = document.getElementById('jumbotron')
 
 
-// MILESTONE 1 const images = document.querySelectorAll('img')
-
-
 // MILESTONE 2
 
-const sources = ['../img/01.webp' , '02.webp' , '03.webp' , '04.webp' , '05.webp']
+const sources = ['/img/01.webp' , '/img/02.webp' , '/img/03.webp' , '/img/04.webp' , '/img/05.webp']
 
 // Genero immagini 
 
@@ -24,6 +21,7 @@ for( let i = 0; i < sources.length; i++ ){
 
 carouselJumbotron.innerHTML = imgs;
 
+const images = document.querySelectorAll('img')
 
 // Creamo la classe active
 
